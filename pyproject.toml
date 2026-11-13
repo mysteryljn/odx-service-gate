@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "odx-service-gate"
+version = "0.1.0"
+description = "Review a limited ODX/PDX diagnostic-service subset with explicit CI policies."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "mysteryljn"}]
+dependencies = []
+
+[project.scripts]
+odx-service-gate = "odx_service_gate.cli:main"
+
+[project.urls]
+Repository = "https://github.com/mysteryljn/odx-service-gate"
+Issues = "https://github.com/mysteryljn/odx-service-gate/issues"
+
+[tool.setuptools.packages.find]
+include = ["odx_service_gate*"]
+
+[tool.setuptools.package-data]
+odx_service_gate = ["fixtures/*.odx"]
